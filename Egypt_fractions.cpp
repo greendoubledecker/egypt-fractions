@@ -36,11 +36,9 @@ vector<int> EgyptFrac(int num, int den) {
 			if(leftDen < leftNum * newDen){
 				break;
 			}
-			//cout << "counting... " << endl;
 			newDen += 1;
 		}
 		fractions.push_back(newDen);
-		//cout << "out" << endl;
 		vector<int> diff = SubtractFrac(leftNum, leftDen, 1, newDen);
 		leftNum = diff[0];
 		leftDen = diff[1];
